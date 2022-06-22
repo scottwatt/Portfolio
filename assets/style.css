@@ -1,0 +1,333 @@
+:root {
+    --fontColor: rgb(60, 68, 112);
+    --backgroundtextcolor: rgb(139, 189, 206);
+    --fontsize: 16px;
+
+}
+/* universal  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* targets the whole body */
+body {
+    background-color: beige;
+    color: var(--fontColor);
+}
+/* Style the nav bar  */
+header {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(169, 165, 165);
+}
+
+.leftNav {
+    border: 1rem solid var(--backgroundtextcolor);
+    background-color: var(--backgroundtextcolor);
+    padding-left: 2rem;
+    color: var(--fontColor);
+}
+
+.rightNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-right: 2rem;
+    text-decoration: underline var(--fontColor);
+    color: var(--fontColor);
+    font-size: 1.5rem;
+}
+/* end of style navbar */
+
+/* style background image, quote, and profile picture */
+.hero {
+    background-image: url("../assets/images/galaxy.jpeg");
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.myself {
+    position: relative;
+    width: 14rem;
+    height: 15rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero img {
+    object-fit: cover;
+
+}
+
+.quote {
+    font-size: 2rem;
+    display: block;
+    position: relative;
+    right: -5rem;
+    max-width: 40rem;
+    color: white;
+}
+
+.quoteText {
+    max-width: 75%;
+}
+/* end of .hero */
+
+/* styles all titles */
+.title {
+    border-right: 5px solid var(--fontColor);
+    min-height: 100%;
+    text-align: right;
+    padding-right: 40px;
+    min-width: 20%;
+    max-width: 20%;
+}
+
+/* styles about me section */
+.aboutMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 30px;
+}
+
+.aboutMe p {
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 1.6;
+    width: 90%;
+}
+
+/* styles work section */
+.myWork {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundtextcolor);
+}
+
+.myWork h2 {
+    color: var(--fontColor);
+    
+ 
+}
+
+.projectsWrapper {
+    width: 80%;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+}
+
+.projectsGrid {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.project {
+    border: solid;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+}
+
+.project:hover {
+    opacity: 1.0;
+    box-shadow: inset 0px 0px 8px
+    blue, 0px 0px 15px
+    blue;
+}
+
+.horiseon {
+    grid-column: 1/3;
+    grid-row: span 4;
+    background-image: url("../assets/images/scottwatt.github.io_Module-1_.png");
+}
+
+.css-cheatsheet {
+    background-image: url("../assets/images/scottwatt.github.io_CSS_Cheatsheet_.png");
+    background-position: 50% 15%;
+}
+
+.coming {
+    background-image: url("../assets/images/comingSoon.html.png");
+    background-position: 20% 90%;
+}
+
+
+.projectLabel {
+    background-color: lightgray;;
+    color: var(--backgroundtextcolor);
+    padding: 10px;
+}
+
+/* styles footer section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contentWrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactList {
+    width: 60%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+footer ul li {
+    font-weight: bold;
+
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 8px;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    background: var(--pop);
+    color: var(--secondary);
+    border-radius: 15px;
+}
+
+/* MEDIA QUERY FOR TABLET SCREENS AND SMALLER */
+@media screen and (max-width: 802px) {
+    .leftNav {
+        border: 0rem solid var(--backgroundtextcolor);
+    }
+
+    .hero .quote {
+        font-size: 28px;
+        padding-right: 20px;
+    }
+    
+    .hero .quote .quoteText {
+        font-size: 35px;
+    }
+
+    .title h2 {
+        font-size: 35px;
+    }
+
+    .aboutMe p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONE SCREENS AND SMALLER */
+@media screen and (max-width: 575px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    header nav ul {
+        min-height: 80px;
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .aboutMe {
+        flex-direction: column;
+    }
+
+    .title {
+        border-bottom: 5px solid var(--fontColor);
+        border-right: none;
+        text-align: center;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .aboutMe p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.6;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .myWork {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .projectsWrapper {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .projectsGrid{
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    .contentWrapper {
+        width: 100%;
+    }
+
+    footer ul li {
+        padding: 10px;
+        text-align: center;
+    }
+    
+}
