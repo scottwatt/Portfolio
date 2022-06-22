@@ -58,7 +58,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The deployed site hosted by GitHub.
 
-https://scottwatt.github.io/Portfolio/#aboutMe
+https://scottwatt.github.io/Portfolio
 
 
 ## Screenshot
