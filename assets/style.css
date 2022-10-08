@@ -12,7 +12,7 @@
 }
 /* targets the whole body */
 body {
-    background-color: beige;
+    background-color: ghostwhite;
     color: var(--fontColor);
 }
 /* Style the nav bar  */
@@ -26,8 +26,8 @@ header {
 }
 
 .leftNav {
-    border: 1rem solid var(--backgroundtextcolor);
-    background-color: var(--backgroundtextcolor);
+    border: 1rem solid lightgray;
+    background-color: lightgray;
     padding-left: 2rem;
     color: var(--fontColor);
 }
@@ -52,12 +52,13 @@ header {
 
 /* style background image, quote, and profile picture */
 .hero {
-    background-image: url("../assets/images/galaxy.jpeg");
-    height: 400px;
+    background-image: url('../assets/images/coding.jpeg');
+    height: 403px;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -76,12 +77,14 @@ header {
 }
 
 .quote {
-    font-size: 2rem;
+    font-size: 1.3rem;
     display: block;
-    position: relative;
     right: -5rem;
-    max-width: 40rem;
+    max-width: 31rem;
     color: white;
+    border: 2px white solid;
+    text-align: -webkit-center;
+    background-color: gray;
 }
 
 .quoteText {
@@ -119,7 +122,7 @@ header {
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
-    background-color: var(--backgroundtextcolor);
+    background-color: grey;
 }
 
 .myWork h2 {
@@ -153,7 +156,8 @@ header {
     background-size: cover;
     background-position: center;
     transition: all 0.5s ease-in-out;
-    opacity: 0.5;
+    opacity: 0.7;
+    margin: 5px;
 }
 
 .project:hover {
@@ -163,14 +167,25 @@ header {
     blue;
 }
 
-.horiseon {
+.blackjack {
     grid-column: 1/3;
     grid-row: span 4;
-    background-image: url("../assets/images/scottwatt.github.io_Module-1_.png");
+    background-image: url("../assets/images/blackjack.png");
+    background-position: top;
 }
 
 .css-cheatsheet {
     background-image: url("../assets/images/scottwatt.github.io_CSS_Cheatsheet_.png");
+    background-position: 50% 15%;
+}
+
+.movieSearch{
+    background-image: url("../assets/images/scottwatt.github.io_Movie_Search_.png");
+    background-position: 50% 15%;
+}
+
+.edTrance{
+    background-image: url("../assets/images/ucb-school-portal.herokuapp.com_login.png");
     background-position: 50% 15%;
 }
 
